@@ -18,27 +18,106 @@ public class gestor : MonoBehaviour
     public void brutezaartificial2()
     {
         int k = 0;
-            while (BUTTON2[j2[k]].activeSelf==false && activos[j2[k]]==false && k<7)
+            while (BUTTON2[j2[k]].activeSelf==false && k < 7 || activos[j2[k]]==false && k<7)
             {
-            i = j2[k] - 1;
+           
             k++;
-           }
-
-      
-        print("es el" + i);
-        if (codigos[i].i == n1)
-        {
-            der();
-
-            if(turn==2)
-            print("jugo derechA");
+            
         }
-        else if (codigos[i].j == n2)
-        {
-            izq();
 
+        i = j2[k];
+        print("es el" + i);
+        BUTTON2[j2[k]].SetActive(false);
+
+        
+
+        if (codigos[i].i == n1 || codigos[i].j==n1)
+        {
+            
             if (turn == 2)
                 print("jugo IZQUIERDA");
+            izq();
+
+        }
+        else if (codigos[i].j == n2 || codigos[i].i == n2)
+        {
+
+            if (turn == 2)
+                print("jugo derechA");
+            der();
+
+        }
+
+
+
+
+    }  public void brutezaartificial3()
+    {
+        int k = 0;
+            while (BUTTON3[j3[k]].activeSelf==false && k < 7 || activos[j3[k]]==false && k<7)
+            {
+           
+            k++;
+            
+        }
+
+        i = j3[k];
+        print("es el" + i);
+        BUTTON3[j3[k]].SetActive(false);
+
+        if (codigos[i].i == n1 || codigos[i].j==n1)
+        {
+            
+            if (turn == 3)
+                print("jugo IZQUIERDA");
+            izq();
+
+        }
+        else if (codigos[i].j == n2 || codigos[i].i == n2)
+        {
+
+            if (turn == 3)
+                print("jugo derechA");
+            der();
+
+        }
+
+
+
+
+    }
+
+     public void brutezaartificial4()
+    {
+        int k = 0;
+            while (BUTTON4[j4[k]].activeSelf==false && k < 7 || activos[j4[k]]==false && k<7)
+            {
+           
+            k++;
+            
+        }
+
+        i = j4[k];
+        print("es el" + i);
+        BUTTON4[j4[k]].SetActive(false);
+
+       
+         if (codigos[i].j == n2 || codigos[i].i == n2)
+        {
+
+            if (turn == 4)
+                print("jugo derechA");
+            der();
+
+        }
+        else
+        if (codigos[i].i == n1 || codigos[i].j == n1)
+        {
+
+            if (turn == 4)
+                print("jugo IZQUIERDA");
+            izq();
+
         }
 
 
@@ -111,6 +190,7 @@ public class gestor : MonoBehaviour
 
         if (cantidadfichas1==0)
         {
+            StopAllCoroutines();
             StartCoroutine(nuevojuego());
            
             if (JUGADOR == 1)
@@ -124,6 +204,7 @@ public class gestor : MonoBehaviour
            
         }  if (cantidadfichas2==0)
         {
+            StopAllCoroutines();
             StartCoroutine(nuevojuego());
 
             if (JUGADOR == 2)
@@ -136,6 +217,7 @@ public class gestor : MonoBehaviour
             }
         }  if (cantidadfichas3==0)
         {
+            StopAllCoroutines();
             StartCoroutine(nuevojuego());
             if (JUGADOR == 3)
             {
@@ -147,6 +229,7 @@ public class gestor : MonoBehaviour
             }
         }  if (cantidadfichas4==0)
         {
+            StopAllCoroutines();
             StartCoroutine(nuevojuego());
             if (JUGADOR == 4)
             {
@@ -251,7 +334,7 @@ public class gestor : MonoBehaviour
             }
             else { BLOQUEADOR.SetActive(true); }
         }
-
+      
     }
 
    
@@ -301,7 +384,9 @@ public class gestor : MonoBehaviour
     {
         alea();
         turnotext.text = "JUGADOR " + turn;
-
+      
+        
+        StartCoroutine( contando());
         if (JUGADOR == 1)
         {
             creaciondesala();
@@ -677,7 +762,7 @@ public class gestor : MonoBehaviour
     }
 
     public GameObject Novalido;
-
+    public GameObject[] nova;
 
     public void mensaje1()
     {
@@ -780,8 +865,8 @@ public class gestor : MonoBehaviour
 
                 if (novbool)
                 {
-                    Novalido.SetActive(false);
-                    Novalido.SetActive(true);
+                    nova[0].SetActive(false);
+                    nova[0].SetActive(true);
                     turnando();
                     va = false;
                 }
@@ -804,8 +889,8 @@ public class gestor : MonoBehaviour
 
                 if (novbool)
                 {
-                    Novalido.SetActive(false);
-                    Novalido.SetActive(true);
+                    nova[1].SetActive(false);
+                    nova[1].SetActive(true);
                     turnando();
                     va = false;
                 }
@@ -828,8 +913,8 @@ public class gestor : MonoBehaviour
 
                 if (novbool)
                 {
-                    Novalido.SetActive(false);
-                    Novalido.SetActive(true);
+                    nova[2].SetActive(false);
+                    nova[2].SetActive(true);
                     turnando();
                     va = false;
                 }
@@ -962,15 +1047,65 @@ public class gestor : MonoBehaviour
 
 
        
-        if (turn == 2)
-            print("jugara el 2]");
+     
 
 
         yield return new WaitForSecondsRealtime(0.5f);
-       
-        if (turn==2)
-        brutezaartificial2();
-        
+
+        if (turn == 2)
+        {
+            if (primerajugada)
+            {
+                i = 27;
+                tirar();
+                BUTTON2[27].SetActive(false);
+                primerajugada = false;
+                primeravez2 = false;
+            }
+            else
+            {
+                brutezaartificial2();
+            }
+           
+        }
+
+        yield return new WaitForSecondsRealtime(0.5f);
+
+        if (turn == 3)
+        {
+            if (primerajugada)
+            {
+                i = 27;
+                tirar();
+                BUTTON3[27].SetActive(false);
+                primerajugada = false;
+                primeravez2 = false;
+            }
+            else
+            {
+                brutezaartificial3();
+            }
+        }
+           
+
+        yield return new WaitForSecondsRealtime(0.5f);
+
+        if (turn == 4)
+        {
+            if (primerajugada)
+            {
+                i = 27;
+                tirar();
+                BUTTON4[27].SetActive(false);
+                primerajugada = false;
+                primeravez2 = false;
+            }
+            else
+            {
+                brutezaartificial4();
+            }
+        }
+
     }
 
     // Update is called once per frame
