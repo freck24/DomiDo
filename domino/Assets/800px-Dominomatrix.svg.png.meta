@@ -1,0 +1,800 @@
+fileFormatVersion: 2
+guid: 25338d71477cc5a43899b07a6ba7caff
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 9155049732347244256
+    second: 800px-Dominomatrix.svg_0
+  - first:
+      213: 7077481482307963364
+    second: 800px-Dominomatrix.svg_1
+  - first:
+      213: 4430923397567892561
+    second: 800px-Dominomatrix.svg_2
+  - first:
+      213: -393360024198217944
+    second: 800px-Dominomatrix.svg_3
+  - first:
+      213: -6790996987076585712
+    second: 800px-Dominomatrix.svg_4
+  - first:
+      213: -2005362662824366647
+    second: 800px-Dominomatrix.svg_5
+  - first:
+      213: 3150027146978829286
+    second: 800px-Dominomatrix.svg_6
+  - first:
+      213: -1673728045775958166
+    second: 800px-Dominomatrix.svg_7
+  - first:
+      213: -4033199743250082410
+    second: 800px-Dominomatrix.svg_8
+  - first:
+      213: -8955325872453819410
+    second: 800px-Dominomatrix.svg_9
+  - first:
+      213: -1470809300232239681
+    second: 800px-Dominomatrix.svg_10
+  - first:
+      213: 5291027997874588822
+    second: 800px-Dominomatrix.svg_11
+  - first:
+      213: -7860465536354621407
+    second: 800px-Dominomatrix.svg_12
+  - first:
+      213: 3582578686761301428
+    second: 800px-Dominomatrix.svg_13
+  - first:
+      213: -5382256073973659562
+    second: 800px-Dominomatrix.svg_14
+  - first:
+      213: 167221234034308651
+    second: 800px-Dominomatrix.svg_15
+  - first:
+      213: -7289905210254113396
+    second: 800px-Dominomatrix.svg_16
+  - first:
+      213: 4093528865787433966
+    second: 800px-Dominomatrix.svg_17
+  - first:
+      213: -4307824855943358279
+    second: 800px-Dominomatrix.svg_18
+  - first:
+      213: 2749401803074520953
+    second: 800px-Dominomatrix.svg_19
+  - first:
+      213: -2189626888026859508
+    second: 800px-Dominomatrix.svg_20
+  - first:
+      213: 5722293935451684579
+    second: 800px-Dominomatrix.svg_21
+  - first:
+      213: 6095277752988159764
+    second: 800px-Dominomatrix.svg_22
+  - first:
+      213: 6949412439870620436
+    second: 800px-Dominomatrix.svg_23
+  - first:
+      213: 4041368572181301638
+    second: 800px-Dominomatrix.svg_24
+  - first:
+      213: -6010859441721273739
+    second: 800px-Dominomatrix.svg_25
+  - first:
+      213: -7056575283853664427
+    second: 800px-Dominomatrix.svg_26
+  - first:
+      213: -8578569539773267275
+    second: 800px-Dominomatrix.svg_27
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: 1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 800px-Dominomatrix.svg_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1404
+        width: 98
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0eea79dd9354d0f70800000000000000
+      internalID: 9155049732347244256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 800px-Dominomatrix.svg_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1170
+        width: 98
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e90f59f8e3483260800000000000000
+      internalID: 7077481482307963364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 800px-Dominomatrix.svg_2
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 1170
+        width: 98
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15c4003aa5dcd7d30800000000000000
+      internalID: 4430923397567892561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 800px-Dominomatrix.svg_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 936
+        width: 98
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82f73d064218a8af0800000000000000
+      internalID: -393360024198217944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 800px-Dominomatrix.svg_4
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 936
+        width: 98
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0175d82783881c1a0800000000000000
+      internalID: -6790996987076585712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 800px-Dominomatrix.svg_5
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 936
+        width: 98
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cda58478458b24e0800000000000000
+      internalID: -2005362662824366647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 800px-Dominomatrix.svg_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 702
+        width: 98
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e3a288200527bb20800000000000000
+      internalID: 3150027146978829286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 800px-Dominomatrix.svg_7
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 702
+        width: 98
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6f4aecc539b5c8e0800000000000000
+      internalID: -1673728045775958166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 800px-Dominomatrix.svg_8
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 702
+        width: 98
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 695d16bc3323708c0800000000000000
+      internalID: -4033199743250082410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 800px-Dominomatrix.svg_9
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 702
+        width: 98
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee3668cf09a48b380800000000000000
+      internalID: -8955325872453819410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 800px-Dominomatrix.svg_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 468
+        width: 98
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb5015febb2a69be0800000000000000
+      internalID: -1470809300232239681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 800px-Dominomatrix.svg_11
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 468
+        width: 98
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69c06f55ee18d6940800000000000000
+      internalID: 5291027997874588822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 800px-Dominomatrix.svg_12
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 468
+        width: 98
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 128e160cd340ae290800000000000000
+      internalID: -7860465536354621407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 800px-Dominomatrix.svg_13
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 468
+        width: 98
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b5fa449550e7b130800000000000000
+      internalID: 3582578686761301428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 800px-Dominomatrix.svg_14
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 468
+        width: 98
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6588c9cfd926e45b0800000000000000
+      internalID: -5382256073973659562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 800px-Dominomatrix.svg_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 234
+        width: 98
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b26748d83d6125200800000000000000
+      internalID: 167221234034308651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 800px-Dominomatrix.svg_16
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 234
+        width: 98
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c85c888b5dd05da90800000000000000
+      internalID: -7289905210254113396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 800px-Dominomatrix.svg_17
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 234
+        width: 98
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee35113a0d22fc830800000000000000
+      internalID: 4093528865787433966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 800px-Dominomatrix.svg_18
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 234
+        width: 98
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b8d5ea0e188734c0800000000000000
+      internalID: -4307824855943358279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 800px-Dominomatrix.svg_19
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 234
+        width: 98
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97743197f56d72620800000000000000
+      internalID: 2749401803074520953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 800px-Dominomatrix.svg_20
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 234
+        width: 98
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c08d38c42f1ec91e0800000000000000
+      internalID: -2189626888026859508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 800px-Dominomatrix.svg_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 98
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ee38fa240ca96f40800000000000000
+      internalID: 5722293935451684579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 800px-Dominomatrix.svg_22
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 0
+        width: 98
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41f433a72d6c69450800000000000000
+      internalID: 6095277752988159764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 800px-Dominomatrix.svg_23
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 0
+        width: 98
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4134b246bc5417060800000000000000
+      internalID: 6949412439870620436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 800px-Dominomatrix.svg_24
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 0
+        width: 98
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6894b47ed43d51830800000000000000
+      internalID: 4041368572181301638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 800px-Dominomatrix.svg_25
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 0
+        width: 98
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57296654f23259ca0800000000000000
+      internalID: -6010859441721273739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 800px-Dominomatrix.svg_26
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 0
+        width: 98
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55fd91baa22021e90800000000000000
+      internalID: -7056575283853664427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 800px-Dominomatrix.svg_27
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 0
+        width: 98
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b204dc647cc2f880800000000000000
+      internalID: -8578569539773267275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
