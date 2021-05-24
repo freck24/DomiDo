@@ -26,7 +26,7 @@ public class gestor : MonoBehaviour
         }
 
         i = j2[k];
-        print("es el" + i);
+      //  print("es el" + i);
         BUTTON2[j2[k]].SetActive(false);
 
         
@@ -35,7 +35,7 @@ public class gestor : MonoBehaviour
         {
             
             if (turn == 2)
-                print("jugo IZQUIERDA");
+         //       print("jugo IZQUIERDA");
             izq();
 
         }
@@ -43,7 +43,7 @@ public class gestor : MonoBehaviour
         {
 
             if (turn == 2)
-                print("jugo derechA");
+          //      print("jugo derechA");
             der();
 
         }
@@ -62,14 +62,14 @@ public class gestor : MonoBehaviour
         }
 
         i = j3[k];
-        print("es el" + i);
+      //  print("es el" + i);
         BUTTON3[j3[k]].SetActive(false);
 
         if (codigos[i].i == n1 || codigos[i].j==n1)
         {
             
             if (turn == 3)
-                print("jugo IZQUIERDA");
+            //    print("jugo IZQUIERDA");
             izq();
 
         }
@@ -77,7 +77,7 @@ public class gestor : MonoBehaviour
         {
 
             if (turn == 3)
-                print("jugo derechA");
+          //      print("jugo derechA");
             der();
 
         }
@@ -98,7 +98,7 @@ public class gestor : MonoBehaviour
         }
 
         i = j4[k];
-        print("es el" + i);
+    //    print("es el" + i);
         BUTTON4[j4[k]].SetActive(false);
 
        
@@ -106,7 +106,7 @@ public class gestor : MonoBehaviour
         {
 
             if (turn == 4)
-                print("jugo derechA");
+            //    print("jugo derechA");
             der();
 
         }
@@ -115,7 +115,7 @@ public class gestor : MonoBehaviour
         {
 
             if (turn == 4)
-                print("jugo IZQUIERDA");
+       //         print("jugo IZQUIERDA");
             izq();
 
         }
@@ -165,6 +165,35 @@ public class gestor : MonoBehaviour
     public int cantidadfichas3 = 7;
     public int cantidadfichas4 = 7;
     public GameObject[] MENSAJEGANAR;
+
+    public GameObject[] fj1;
+    public GameObject[] fj2;
+    public GameObject[] fj3;
+    public GameObject[] fj4;
+
+    public Transform[] tufichas;
+    public void quitarfichas()
+    {
+       /* for(int k=0;k<(7-cantidadfichas1); k++)
+        {
+            fj1[k].SetActive(false);
+        }*/
+        
+        for(int k=0;k<(7-cantidadfichas2); k++)
+        {
+            fj2[k].SetActive(false);
+        }for(int k=0;k<(7-cantidadfichas3); k++)
+        {
+            fj3[k].SetActive(false);
+        }for(int k=0;k<(7-cantidadfichas4); k++)
+        {
+            fj4[k].SetActive(false);
+        }
+    }
+
+
+
+
     public void contar1()
     {
         cantidadfichas1 = 0;
@@ -243,7 +272,7 @@ public class gestor : MonoBehaviour
 
 
 
-
+        quitarfichas();
 
      }
 
@@ -253,8 +282,49 @@ public class gestor : MonoBehaviour
         yield return new WaitForSecondsRealtime(2);
         SceneManager.LoadScene(0);
     }
+    public int[] ordenado = new int[7];
+    public int mayor;
+
+    public int valorguardado;
+    public int valorguardadomayor;
+    public void ordenar()
+    {
+        
+        
 
 
+
+
+        for(int k=0; k<j1.Length; k++)
+        {
+            mayor = j1[k];
+
+
+            valorguardadomayor = -1;
+
+            for(int h=6; h>k; h--)
+            {
+                if (j1[h]>mayor)
+                {
+                    mayor = j1[h];
+                    valorguardadomayor = h;
+                }
+               
+
+            }
+
+            if (valorguardadomayor == -1)
+            {
+                valorguardadomayor = k;
+            }
+
+            valorguardado = j1[k];
+            j1[k] = mayor;
+            j1[valorguardadomayor] = valorguardado;
+            
+        }
+       
+    }
 
 
     public quitar[] cogen;
@@ -274,10 +344,20 @@ public class gestor : MonoBehaviour
                   //  print("klk");
                 }
                 cogen[j1[k]].cogido = true;
+
+                       }
+            ordenar();
+
+            for (int k = 0; k < 7; k++)
+            {
+                tufichas[j1[k]].position = fj1[6-k].transform.position;
+                tufichas[j1[k]].eulerAngles = fj1[6-k].transform.eulerAngles;
+
             }
-            
-            
-            for(int k=0; k < 7; k++)
+
+
+
+                for (int k=0; k < 7; k++)
             {
                 j2[k] = Random.Range(0, 28);
 
@@ -382,7 +462,14 @@ public class gestor : MonoBehaviour
 
     void Start()
     {
+      
         alea();
+        for(int k=0; k<ordenado.Length; k++)
+        {
+            ordenado[k] = j1[k];
+        }
+
+        
         turnotext.text = "JUGADOR " + turn;
       
         
@@ -692,12 +779,19 @@ public class gestor : MonoBehaviour
     #endregion
 
 
+    public Transform[] fichasobjetos;
+
+    public dectodomino detecto1;
+    public dectodomino detecto2;
+    public bool unavezdec1 = true;
+    public bool unavezdec2 = true;
+
+    public bool doblederecha = false;
+    public bool dobleizquierda = false;
 
 
-
-
-
-
+    public bool[] rotaciones = new bool[5];
+    public bool[] rotaciones2 = new bool[5];
 
     public void logica()
     {
@@ -712,12 +806,112 @@ public class gestor : MonoBehaviour
                 if (codigos[i].doble == false)
 
                 {
-                    pieza[i].position = p1.arriba.position;
-                    p1 = codigos[i];
                     
+
+                    /*   if (doblarderecha)
+                       {
+                           for (int k = 0; k < rotaciones2.Length; k++)
+                           {
+                               rotaciones2[k] = false;
+                           }
+                           unavezdec2 = true;
+                       }*/
+
+
+                    if (detecto2.detectado == true && unavezdec2 && doblederecha==false)
+                    {
+                        doblarderecha = true;
+                        unavezdec2 = false;
+
+
+                    }
+
+
+
+
+
+                    if (doblarderecha)
+                    {
+                        pieza[i].position = new Vector3(p1.arriba.position.x + 1.1f, p1.arriba.position.y, p1.arriba.position.z - 1.06f);
+                        fichasobjetos[i].eulerAngles = new Vector3(90, 0, -90);
+
+                        doblarderecha = false;
+                        rotaciones2[0] = true;
+                    }
+                    else
+                         if (rotaciones2[0])
+                    {
+
+                        pieza[i].position = p1.arriba.position;
+                        fichasobjetos[i].eulerAngles = new Vector3(90, 0, -90);
+                        rotaciones2[0] = false;
+                        rotaciones2[1] = true;
+                    }
+                    else if (rotaciones2[1])
+                    {
+
+                        pieza[i].position = new Vector3(p1.arriba.position.x - 1.1f, p1.arriba.position.y, p1.arriba.position.z -1.1f);
+                        fichasobjetos[i].eulerAngles = new Vector3(90, 0, -180);
+                        rotaciones2[1] = false;
+                        rotaciones2[2] = true;
+
+
+
+                    }
+                    else if (rotaciones2[2])
+                    {
+                        fichasobjetos[i].eulerAngles = new Vector3(90, 0, -180);
+                        pieza[i].position = p1.arriba.position;
+
+                    }
+                    else
+                    {
+                        pieza[i].position = p1.arriba.position;
+                    }
+                    p1 = codigos[i];
+
+
+
+
+                    doblederecha = false;
+
                 }
                 else
                 {
+
+
+
+
+                    if (rotaciones2[0])
+                    {
+                        fichasobjetos[i].eulerAngles = new Vector3(90, 0, -90);
+                     
+                    }
+                    if (rotaciones2[1])
+                    {
+                        fichasobjetos[i].eulerAngles = new Vector3(90, 0, -90);
+                        
+                        rotaciones2[0] = true;
+                        rotaciones2[1] = false;
+
+
+                    }
+
+                    if (rotaciones2[2])
+                    {
+                        fichasobjetos[i].eulerAngles = new Vector3(90, 0, -180);
+                    }
+
+
+
+
+
+
+
+                    doblederecha = true;
+
+
+
                     pieza[i].position = p1.derecha.position;
                     p1 = codigos[i];
                     n2 = p1.j;
@@ -730,17 +924,96 @@ public class gestor : MonoBehaviour
             }
             else
             {
+
+
                 if (codigos[i].doble == false)
 
+
+
                 {
-                    pieza[i].position = p2.abajo.position;
+
+
+                    if (detecto1.detectado == true && unavezdec1 && dobleizquierda==false)
+                    {
+                        doblarizquierda = true;
+                        unavezdec1 = false;
+                    }
+
+
+                    if (doblarizquierda)
+                    {
+                        pieza[i].position = new Vector3(p2.abajo.position.x - 1.1f, p2.abajo.position.y, p2.abajo.position.z + 1.06f);
+                        fichasobjetos[i].eulerAngles = new Vector3(90, 0, -90);
+
+                        doblarizquierda = false;
+                        rotaciones[0] = true;
+                    }
+                    else
+                         if (rotaciones[0])
+                    {
+
+                        pieza[i].position = p2.abajo.position;
+                        fichasobjetos[i].eulerAngles = new Vector3(90, 0, -90); 
+                        rotaciones[0] = false;
+                        rotaciones[1] = true;
+                    }
+                    else if (rotaciones[1])
+                    {
+
+                        pieza[i].position = new Vector3(p2.abajo.position.x + 1f, p2.abajo.position.y, p2.abajo.position.z + 1);
+                        fichasobjetos[i].eulerAngles = new Vector3(90, 0, -180);
+                        rotaciones[1] = false;
+                        rotaciones[2] = true;
+
+
+
+                    }
+                    else if (rotaciones[2])
+                    {
+                        fichasobjetos[i].eulerAngles = new Vector3(90, 0, -180);
+                        pieza[i].position = p2.abajo.position;
+
+                    }
+
+
+                    else
+                    {
+                        pieza[i].position = p2.abajo.position;
+
+                    }
+
                     p2 = codigos[i];
+
+
+                    dobleizquierda = false;
+
                 }
                 else
                 {
-                    pieza[i].position = p2.izquierda.position;
+                      if (rotaciones[0] )
+                    {
+                        fichasobjetos[i].eulerAngles = new Vector3(90, 0, -90);
+                        print("ocurre");
+                    }    if (rotaciones[1])
+                    {
+                        fichasobjetos[i].eulerAngles = new Vector3(90, 0, -90);
+                        print("ocurre");
+                        rotaciones[0] = true;
+                        rotaciones[1] = false;
+
+
+                    }
+
+                        if (rotaciones[2])
+                    {
+                        fichasobjetos[i].eulerAngles = new Vector3(90, 0, -180);
+                    }
+
+                        pieza[i].position = p2.izquierda.position;
                     p2 = codigos[i];
                     n1 = p2.j;
+
+                    dobleizquierda = true;
                 }
 
             }
@@ -748,16 +1021,6 @@ public class gestor : MonoBehaviour
 
 
         }
-
-
-
-
-
-
-
-
-
-
 
     }
 
@@ -925,6 +1188,8 @@ public class gestor : MonoBehaviour
         else
         {
             mensajebloqueo.SetActive(true);
+            StopAllCoroutines();
+            StartCoroutine(nuevojuego());
         }
 
     }
@@ -957,7 +1222,8 @@ public class gestor : MonoBehaviour
         turnotext.text = "JUGADOR " + turn;
         
     }
-
+    public bool doblarizquierda = false;
+    public bool doblarderecha = false;
     public void tirar()
     {
 
@@ -1004,6 +1270,7 @@ public class gestor : MonoBehaviour
             {
                if (codigos[i].j == n1)
                 {
+                   
 
                     logica();
                     n1 = codigos[i].i;
@@ -1037,74 +1304,88 @@ public class gestor : MonoBehaviour
 
         while (va ==false && juegobloqueado==false)
         Comprobadordeturno();
+        tusfi[i].SetActive(false);
+        
 
     }
-  
+
+    public GameObject[] tusfi;
+    public bool jugar = true;
     IEnumerator contando()
     {
-        yield return new WaitForSecondsRealtime(0.5f);
-        contar1();
 
 
-       
-     
-
-
-        yield return new WaitForSecondsRealtime(0.5f);
-
-        if (turn == 2)
+        /*while (jugar)
         {
-            if (primerajugada)
+            if (turn == 1)
             {
-                i = 27;
-                tirar();
-                BUTTON2[27].SetActive(false);
-                primerajugada = false;
-                primeravez2 = false;
-            }
-            else
-            {
-                brutezaartificial2();
-            }
-           
-        }
+                turn = 2;
+            }*/
 
-        yield return new WaitForSecondsRealtime(0.5f);
-
-        if (turn == 3)
-        {
-            if (primerajugada)
-            {
-                i = 27;
-                tirar();
-                BUTTON3[27].SetActive(false);
-                primerajugada = false;
-                primeravez2 = false;
-            }
-            else
-            {
-                brutezaartificial3();
-            }
-        }
+            yield return new WaitForSecondsRealtime(0.5f);
+            contar1();
            
 
-        yield return new WaitForSecondsRealtime(0.5f);
 
-        if (turn == 4)
-        {
-            if (primerajugada)
+
+
+            yield return new WaitForSecondsRealtime(0.5f);
+
+            if (turn == 2)
             {
-                i = 27;
-                tirar();
-                BUTTON4[27].SetActive(false);
-                primerajugada = false;
-                primeravez2 = false;
+                if (primerajugada)
+                {
+                    i = 27;
+                    tirar();
+                    BUTTON2[27].SetActive(false);
+                    primerajugada = false;
+                    primeravez2 = false;
+                }
+                else
+                {
+                    brutezaartificial2();
+                }
+
             }
-            else
+
+            yield return new WaitForSecondsRealtime(0.5f);
+
+            if (turn == 3)
             {
-                brutezaartificial4();
+                if (primerajugada)
+                {
+                    i = 27;
+                    tirar();
+                    BUTTON3[27].SetActive(false);
+                    primerajugada = false;
+                    primeravez2 = false;
+                }
+                else
+                {
+                    brutezaartificial3();
+                }
             }
-        }
+
+
+            yield return new WaitForSecondsRealtime(0.5f);
+
+            if (turn == 4)
+            {
+                if (primerajugada)
+                {
+                    i = 27;
+                    tirar();
+                    BUTTON4[27].SetActive(false);
+                    primerajugada = false;
+                    primeravez2 = false;
+                }
+                else
+                {
+                    brutezaartificial4();
+                }
+            }
+
+     //   }
 
     }
 
