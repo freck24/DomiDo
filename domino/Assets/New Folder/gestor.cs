@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class gestor : MonoBehaviour
 {
+    public GameObject controlesprincipal;
     // Start is called before the first frame update
 
 
@@ -275,12 +276,120 @@ public class gestor : MonoBehaviour
         quitarfichas();
 
      }
+    public int puntuacionnivel;
+    public int puntuacionnivel1;
+    public int puntuacionnivel2;
+    public int puntuacionnivel3;
+    public int puntuacionnivel4;
+    public void actualizarpuntuacion()
+    {
+       for(int k = 0; k < button.Length; k++)
+        {
+            if (button[k].activeSelf)
+            {
+                puntuacionnivel1 += codigos[k].i;
+                puntuacionnivel1 += codigos[k].j;
+            }
 
+            if (BUTTON2[k].activeSelf)
+            {
+                puntuacionnivel2 += codigos[k].i;
+                puntuacionnivel2 += codigos[k].j;
+            }
+
+            if (BUTTON3[k].activeSelf)
+            {
+                puntuacionnivel3 += codigos[k].i;
+                puntuacionnivel3 += codigos[k].j;
+            }
+
+
+            if (BUTTON4[k].activeSelf)
+            {
+                puntuacionnivel4 += codigos[k].i;
+                puntuacionnivel4 += codigos[k].j;
+            }
+
+
+           
+
+        }
+        puntuacionnivel = puntuacionnivel1 + puntuacionnivel2 + puntuacionnivel3 + puntuacionnivel4;
+
+
+        if (cantidadfichas1 == 0)
+        {
+            puntj1 += puntuacionnivel;
+        }  if (cantidadfichas2 == 0)
+        {
+            puntj2 += puntuacionnivel;
+        }  if (cantidadfichas3 == 0)
+        {
+            puntj3 += puntuacionnivel;
+        }  if (cantidadfichas4 == 0)
+        {
+            puntj4 += puntuacionnivel;
+        }
+
+        PlayerPrefs.SetInt("puntj1", puntj1);
+        PlayerPrefs.SetInt("puntj2", puntj2);
+        PlayerPrefs.SetInt("puntj3", puntj3);
+        PlayerPrefs.SetInt("puntj4", puntj4);
+
+    }
+
+    public Text mensaje;
+    public GameObject mensajeCAMBIARBLE;
 
     IEnumerator nuevojuego()
     {
+        actualizarpuntuacion();
+
         yield return new WaitForSecondsRealtime(2);
-        SceneManager.LoadScene(0);
+        if (juegobloqueado)
+        {
+            if(puntuacionnivel1<puntuacionnivel2 && puntuacionnivel1<puntuacionnivel3 && puntuacionnivel1 < puntuacionnivel4)
+            {
+                mensaje.text = "GANO EL PRIMER JUGADOR";
+                mensajeCAMBIARBLE.SetActive(false);
+                mensajeCAMBIARBLE.SetActive(true);
+                puntj1 += puntuacionnivel;
+                PlayerPrefs.SetInt("puntj1", puntj1);
+            }
+            else  if(puntuacionnivel2<puntuacionnivel1 && puntuacionnivel2<puntuacionnivel3 && puntuacionnivel2 < puntuacionnivel4)
+            {
+                mensaje.text = "GANO EL SEGUNDO JUGADOR";
+                mensajeCAMBIARBLE.SetActive(false);
+                mensajeCAMBIARBLE.SetActive(true);
+                puntj2 += puntuacionnivel;
+                PlayerPrefs.SetInt("puntj2", puntj2);
+            }
+            else  if(puntuacionnivel3<puntuacionnivel2 && puntuacionnivel3<puntuacionnivel1 && puntuacionnivel3 < puntuacionnivel4)
+            {
+                mensaje.text = "GANO EL TERCER JUGADOR";
+                mensajeCAMBIARBLE.SetActive(false);
+                mensajeCAMBIARBLE.SetActive(true);
+                puntj3 += puntuacionnivel;
+                PlayerPrefs.SetInt("puntj3", puntj3);
+            }
+            else  if(puntuacionnivel4<puntuacionnivel2 && puntuacionnivel4<puntuacionnivel3 && puntuacionnivel4 < puntuacionnivel1)
+            {
+                mensaje.text = "GANO EL CUARTO JUGADOR";
+                mensajeCAMBIARBLE.SetActive(false);
+                mensajeCAMBIARBLE.SetActive(true);
+                puntj4 += puntuacionnivel;
+                PlayerPrefs.SetInt("puntj4", puntj4);
+            }
+            else
+            {
+                mensaje.text = "NO HUBO GANADOR";
+                mensajeCAMBIARBLE.SetActive(false);
+                mensajeCAMBIARBLE.SetActive(true);
+
+            }
+        }
+        
+      //  SceneManager.LoadScene(0);
     }
     public int[] ordenado = new int[7];
     public int mayor;
@@ -459,10 +568,21 @@ public class gestor : MonoBehaviour
     {
         miturno = false;
     }
-
+    public Text puntj1text;
+    public Text puntj2text;
+    public Text puntj3text;
+    public Text puntj4text;
     void Start()
     {
-      
+        puntj1 = PlayerPrefs.GetInt("puntj1", 0);
+        puntj2 = PlayerPrefs.GetInt("puntj2", 0);
+        puntj3 = PlayerPrefs.GetInt("puntj3", 0);
+        puntj4 = PlayerPrefs.GetInt("puntj4", 0);
+        puntj1text.text = puntj1.ToString();
+        puntj2text.text = puntj2.ToString();
+        puntj3text.text = puntj3.ToString();
+        puntj4text.text = puntj4.ToString();
+
         alea();
         for(int k=0; k<ordenado.Length; k++)
         {
@@ -477,6 +597,16 @@ public class gestor : MonoBehaviour
         if (JUGADOR == 1)
         {
             creaciondesala();
+        }
+
+        if (turn != JUGADOR)
+        {
+
+            for (int k = 0; k < codigos.Length; k++)
+            {
+
+                botones[k].color = d;
+            }
         }
 
     }
@@ -783,6 +913,8 @@ public class gestor : MonoBehaviour
 
     public dectodomino detecto1;
     public dectodomino detecto2;
+    public dectodomino detecto3;
+    public dectodomino detecto4;
     public bool unavezdec1 = true;
     public bool unavezdec2 = true;
 
@@ -827,7 +959,13 @@ public class gestor : MonoBehaviour
                     }
 
 
+                    if (detecto3.detectado && unavezdec2)
+                    {
+                        doblarderecha = true;
 
+                        unavezdec2 = false;
+
+                    }
 
 
                     if (doblarderecha)
@@ -940,6 +1078,14 @@ public class gestor : MonoBehaviour
                     }
 
 
+                    if (detecto4.detectado && unavezdec1)
+                    {
+                        dobleizquierda = true;
+
+                        unavezdec1 = false;
+
+                    }
+
                     if (doblarizquierda)
                     {
                         pieza[i].position = new Vector3(p2.abajo.position.x - 1.1f, p2.abajo.position.y, p2.abajo.position.z + 1.06f);
@@ -1038,6 +1184,33 @@ public class gestor : MonoBehaviour
     public Image[] botones3 = new Image[28];
     public Image[] botones4 = new Image[28];
     public Color c;
+    public Color d;
+    public Color white;
+
+    public GameObject cam1;
+    public GameObject cam2;
+    public bool cama=false;
+
+    public int puntj1;
+    public int puntj2;
+    public int puntj3;
+    public int puntj4;
+
+
+    public void newgame()
+    {
+        SceneManager.LoadScene(0);
+    }
+
+
+
+
+    public void camara()
+    {
+        cam1.SetActive(cama);
+        cam2.SetActive(!cama);
+        cama = !cama;
+    }
 
     public void comprobar()
     {  
@@ -1045,17 +1218,17 @@ public class gestor : MonoBehaviour
         {
             activos[k] = false;
             botones[k].color = c;
-            botones2[k].color = c;
-            botones3[k].color = c;
-            botones4[k].color = c;
+           // botones2[k].color = c;
+          //  botones3[k].color = c;
+          //  botones4[k].color = c;
             if (codigos[k].j == n1 || codigos[k].i == n1 || codigos[k].i == n2 || codigos[k].j == n2)
             {
                 
                 activos[k] = true;
-                botones[k].color = Color.white;
-                botones2[k].color = Color.white;
-                botones3[k].color = Color.white;
-                botones4[k].color = Color.white;
+                botones[k].color = white;
+           //     botones2[k].color = Color.white;
+          //      botones3[k].color = Color.white;
+          //      botones4[k].color = Color.white;
             }
         }
 
@@ -1305,7 +1478,20 @@ public class gestor : MonoBehaviour
         while (va ==false && juegobloqueado==false)
         Comprobadordeturno();
         tusfi[i].SetActive(false);
-        
+
+
+
+        if (turn != JUGADOR)
+        {
+
+            for (int k = 0; k < codigos.Length; k++)
+            {
+          
+                botones[k].color = d;
+            }
+        }
+      
+
 
     }
 
