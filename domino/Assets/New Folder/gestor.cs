@@ -175,6 +175,7 @@ public class gestor : MonoBehaviour
     public Transform[] tufichas;
     public void quitarfichas()
     {
+        contar1();
        /* for(int k=0;k<(7-cantidadfichas1); k++)
         {
             fj1[k].SetActive(false);
@@ -273,7 +274,7 @@ public class gestor : MonoBehaviour
 
 
 
-        quitarfichas();
+       // quitarfichas();
 
      }
     public int puntuacionnivel;
@@ -610,15 +611,76 @@ public class gestor : MonoBehaviour
         }
 
     }
+
+    public Animator animator1;
+    public Animator animator2;
+    public Animator animator3;
+    public Animator animator4;
+
     public void der()
     {
         derecha = true;
-        tirar();
+
+        if (turn == 1)
+        {
+            animator1.SetBool("jugar", true);
+        } if (turn == 2)
+        {
+            animator2.SetBool("jugar", true);
+        } if (turn == 3)
+        {
+            animator3.SetBool("jugar", true);
+        } if (turn == 4)
+        {
+            animator4.SetBool("jugar", true);
+        }
+        
+
+        //tirar();
     }
+
+    public void falseador()
+    {
+        if (turn == 1)
+        {
+            animator1.SetBool("jugar", false);
+        }
+        if (turn == 2)
+        {
+            animator2.SetBool("jugar", false);
+        }
+        if (turn == 3)
+        {
+            animator3.SetBool("jugar", false);
+        }
+        if (turn == 4)
+        {
+            animator4.SetBool("jugar", false);
+        }
+    }
+
     public void izq()
     {
         derecha = false;
-        tirar();
+
+        if (turn == 1)
+        {
+            animator1.SetBool("jugar", true);
+        }
+        if (turn == 2)
+        {
+            animator2.SetBool("jugar", true);
+        }
+        if (turn == 3)
+        {
+            animator3.SetBool("jugar", true);
+        }
+        if (turn == 4)
+        {
+            animator4.SetBool("jugar", true);
+        }
+
+        // tirar();
     }
     #region
 
@@ -652,8 +714,8 @@ public class gestor : MonoBehaviour
                 ladoderecho.SetActive(true);
                 lado2 = true;
             }
-
-            if(lado1==true && lado2 == false)
+           
+            if (lado1==true && lado2 == false)
             {
                 izq();
             }
@@ -1397,9 +1459,14 @@ public class gestor : MonoBehaviour
     }
     public bool doblarizquierda = false;
     public bool doblarderecha = false;
+
+    public void quitarfichastuyas()
+    {
+        tusfi[i].SetActive(false);
+    }
     public void tirar()
     {
-
+        falseador();
         turnando();
       
 
@@ -1472,12 +1539,12 @@ public class gestor : MonoBehaviour
         ladoizquierdo.SetActive(false);
         ladoderecho.SetActive(false);
         va = false;
-        StartCoroutine(contando());
+       
 
 
         while (va ==false && juegobloqueado==false)
         Comprobadordeturno();
-        tusfi[i].SetActive(false);
+        
 
 
 
@@ -1490,9 +1557,9 @@ public class gestor : MonoBehaviour
                 botones[k].color = d;
             }
         }
-      
 
 
+        StartCoroutine(contando());
     }
 
     public GameObject[] tusfi;
