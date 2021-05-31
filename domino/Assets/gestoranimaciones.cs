@@ -20,8 +20,18 @@ public class gestoranimaciones : MonoBehaviour
     }
 
     public void realizarjugada()
-    {
+    { if(gestor.juegobloqueado==false)
         gestor.tirar();
+        if (gestor.primerajugada)
+        {
+            gestor.primerajugada = false;
+        }
+        if (gestor.primeravez2)
+        {
+            gestor.primeravez2 = false;
+        }
+
+
     }
     public void quitarficha()
     {

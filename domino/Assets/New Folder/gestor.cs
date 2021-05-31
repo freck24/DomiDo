@@ -616,6 +616,38 @@ public class gestor : MonoBehaviour
     public Animator animator2;
     public Animator animator3;
     public Animator animator4;
+    public void quitadordeprimerosbotones()
+    {
+        BLOQUEADOR.SetActive(true);
+        for (int k = 0; k < codigos.Length; k++)
+        {
+
+            botones[k].color = d;
+
+        }
+    }
+
+
+    public void jugadademas()
+    {
+        if (turn == 1)
+        {
+            quitadordeprimerosbotones();
+            animator1.SetBool("jugar", true);
+        }
+        if (turn == 2)
+        {
+            animator2.SetBool("jugar", true);
+        }
+        if (turn == 3)
+        {
+            animator3.SetBool("jugar", true);
+        }
+        if (turn == 4)
+        {
+            animator4.SetBool("jugar", true);
+        }
+    }
 
     public void der()
     {
@@ -623,6 +655,7 @@ public class gestor : MonoBehaviour
 
         if (turn == 1)
         {
+            quitadordeprimerosbotones();
             animator1.SetBool("jugar", true);
         } if (turn == 2)
         {
@@ -634,7 +667,8 @@ public class gestor : MonoBehaviour
         {
             animator4.SetBool("jugar", true);
         }
-        
+        ladoizquierdo.SetActive(false);
+        ladoderecho.SetActive(false);
 
         //tirar();
     }
@@ -665,6 +699,7 @@ public class gestor : MonoBehaviour
 
         if (turn == 1)
         {
+            quitadordeprimerosbotones();
             animator1.SetBool("jugar", true);
         }
         if (turn == 2)
@@ -679,7 +714,8 @@ public class gestor : MonoBehaviour
         {
             animator4.SetBool("jugar", true);
         }
-
+        ladoizquierdo.SetActive(false);
+        ladoderecho.SetActive(false);
         // tirar();
     }
     #region
@@ -736,7 +772,7 @@ public class gestor : MonoBehaviour
 
         if (primerajugada)
         {
-            tirar();
+            jugadademas();
         }
 
         LadoTablero();
@@ -745,7 +781,7 @@ public class gestor : MonoBehaviour
         i = 1;
         if (primerajugada)
         {
-            tirar();
+            jugadademas();
         }
 
 
@@ -755,7 +791,7 @@ public class gestor : MonoBehaviour
         i = 2;
         if (primerajugada)
         {
-            tirar();
+            jugadademas();;
         }
         LadoTablero();
     } public void b3()
@@ -763,7 +799,7 @@ public class gestor : MonoBehaviour
         i = 3;
         if (primerajugada)
         {
-            tirar();
+            jugadademas();;
         }
         LadoTablero();
     } public void b4()
@@ -771,7 +807,7 @@ public class gestor : MonoBehaviour
         i = 4;
         if (primerajugada)
         {
-            tirar();
+            jugadademas();;
         }
         LadoTablero();
     } public void b5()
@@ -779,7 +815,7 @@ public class gestor : MonoBehaviour
         i = 5;
         if (primerajugada)
         {
-            tirar();
+            jugadademas();;
         }
         LadoTablero();
     } public void b6()
@@ -787,7 +823,7 @@ public class gestor : MonoBehaviour
         i = 6;
         if (primerajugada)
         {
-            tirar();
+            jugadademas();;
         }
         LadoTablero();
     } public void b7()
@@ -795,7 +831,7 @@ public class gestor : MonoBehaviour
         i = 7;
         if (primerajugada)
         {
-            tirar();
+            jugadademas();;
         }
         LadoTablero();
     } public void b8()
@@ -803,7 +839,7 @@ public class gestor : MonoBehaviour
         i = 8;
         if (primerajugada)
         {
-            tirar();
+            jugadademas();;
         }
         LadoTablero();
     } public void b9()
@@ -811,7 +847,7 @@ public class gestor : MonoBehaviour
         i = 9;
         if (primerajugada)
         {
-            tirar();
+            jugadademas();;
         }
         LadoTablero();
     } public void b10()
@@ -819,7 +855,7 @@ public class gestor : MonoBehaviour
         i = 10;
         if (primerajugada)
         {
-            tirar();
+            jugadademas();;
         }
         LadoTablero();
     } public void b11()
@@ -827,7 +863,7 @@ public class gestor : MonoBehaviour
         i = 11;
         if (primerajugada)
         {
-            tirar();
+            jugadademas();;
         }
         LadoTablero();
     } public void b12()
@@ -835,7 +871,7 @@ public class gestor : MonoBehaviour
         i = 12;
         if (primerajugada)
         {
-            tirar();
+            jugadademas();;
         }
         LadoTablero();
     } public void b13()
@@ -843,7 +879,7 @@ public class gestor : MonoBehaviour
         i = 13;
         if (primerajugada)
         {
-            tirar();
+            jugadademas();;
         }
         LadoTablero();
     } public void b14()
@@ -851,7 +887,7 @@ public class gestor : MonoBehaviour
         i = 14;
         if (primerajugada)
         {
-            tirar();
+            jugadademas();;
         }
         LadoTablero();
     } public void b15()
@@ -859,7 +895,7 @@ public class gestor : MonoBehaviour
         i = 15;
         if (primerajugada)
         {
-            tirar();
+            jugadademas();;
         }
         LadoTablero();
     } public void b16()
@@ -867,7 +903,7 @@ public class gestor : MonoBehaviour
         i = 16;
         if (primerajugada)
         {
-            tirar();
+            jugadademas();;
         }
         LadoTablero();
     } public void b17()
@@ -875,7 +911,7 @@ public class gestor : MonoBehaviour
         i = 17;
         if (primerajugada)
         {
-            tirar();
+            jugadademas();;
         }
         LadoTablero();
     } public void b18()
@@ -883,7 +919,7 @@ public class gestor : MonoBehaviour
         i = 18;
         if (primerajugada)
         {
-            tirar();
+            jugadademas();;
         }
         LadoTablero();
     } public void b19()
@@ -891,7 +927,7 @@ public class gestor : MonoBehaviour
         i = 19;
         if (primerajugada)
         {
-            tirar();
+            jugadademas();;
         }
         LadoTablero();
     } public void b20()
@@ -899,7 +935,7 @@ public class gestor : MonoBehaviour
         i = 20;
         if (primerajugada)
         {
-            tirar();
+            jugadademas();;
         }
         LadoTablero();
     }
@@ -908,7 +944,7 @@ public class gestor : MonoBehaviour
         i = 21;
         if (primerajugada)
         {
-            tirar();
+            jugadademas();;
         }
         LadoTablero();
     }
@@ -917,7 +953,7 @@ public class gestor : MonoBehaviour
         i = 22;
         if (primerajugada)
         {
-            tirar();
+            jugadademas();;
         }
         LadoTablero();
     }
@@ -926,7 +962,7 @@ public class gestor : MonoBehaviour
         i = 23;
         if (primerajugada)
         {
-            tirar();
+            jugadademas();;
         }
         LadoTablero();
     }
@@ -935,7 +971,7 @@ public class gestor : MonoBehaviour
         i = 24;
         if (primerajugada)
         {
-            tirar();
+            jugadademas();;
         }
         LadoTablero();
     }
@@ -944,7 +980,7 @@ public class gestor : MonoBehaviour
         i = 25;
         if (primerajugada)
         {
-            tirar();
+            jugadademas();;
         }
         LadoTablero();
     }
@@ -953,7 +989,7 @@ public class gestor : MonoBehaviour
         i = 26;
         if (primerajugada)
         {
-            tirar();
+            jugadademas();;
         }
         LadoTablero();
     }
@@ -962,7 +998,7 @@ public class gestor : MonoBehaviour
         i = 27;
         if (primerajugada)
         {
-            tirar();
+            jugadademas();;
         }
         LadoTablero();
     }
@@ -1536,8 +1572,7 @@ public class gestor : MonoBehaviour
 
 
         comprobar();
-        ladoizquierdo.SetActive(false);
-        ladoderecho.SetActive(false);
+       
         va = false;
        
 
@@ -1555,6 +1590,7 @@ public class gestor : MonoBehaviour
             {
           
                 botones[k].color = d;
+
             }
         }
 
@@ -1566,33 +1602,25 @@ public class gestor : MonoBehaviour
     public bool jugar = true;
     IEnumerator contando()
     {
-
-
-        /*while (jugar)
-        {
-            if (turn == 1)
-            {
-                turn = 2;
-            }*/
+            
 
             yield return new WaitForSecondsRealtime(0.5f);
             contar1();
-           
 
 
+        if (juegobloqueado == false) { 
 
 
-            yield return new WaitForSecondsRealtime(0.5f);
+            yield return new WaitForSecondsRealtime(1f);
 
             if (turn == 2)
             {
                 if (primerajugada)
                 {
                     i = 27;
-                    tirar();
+                    jugadademas();
                     BUTTON2[27].SetActive(false);
-                    primerajugada = false;
-                    primeravez2 = false;
+                    
                 }
                 else
                 {
@@ -1601,17 +1629,16 @@ public class gestor : MonoBehaviour
 
             }
 
-            yield return new WaitForSecondsRealtime(0.5f);
+            yield return new WaitForSecondsRealtime(1f);
 
             if (turn == 3)
             {
                 if (primerajugada)
                 {
                     i = 27;
-                    tirar();
+                    jugadademas();
                     BUTTON3[27].SetActive(false);
-                    primerajugada = false;
-                    primeravez2 = false;
+                   
                 }
                 else
                 {
@@ -1620,17 +1647,16 @@ public class gestor : MonoBehaviour
             }
 
 
-            yield return new WaitForSecondsRealtime(0.5f);
+            yield return new WaitForSecondsRealtime(1f);
 
             if (turn == 4)
             {
                 if (primerajugada)
                 {
                     i = 27;
-                    tirar();
+                    jugadademas();
                     BUTTON4[27].SetActive(false);
-                    primerajugada = false;
-                    primeravez2 = false;
+                   
                 }
                 else
                 {
@@ -1638,7 +1664,7 @@ public class gestor : MonoBehaviour
                 }
             }
 
-     //   }
+        }
 
     }
 
