@@ -575,6 +575,7 @@ public class gestor : MonoBehaviour
     public Text puntj4text;
     void Start()
     {
+        camara();
         puntj1 = PlayerPrefs.GetInt("puntj1", 0);
         puntj2 = PlayerPrefs.GetInt("puntj2", 0);
         puntj3 = PlayerPrefs.GetInt("puntj3", 0);
@@ -594,7 +595,7 @@ public class gestor : MonoBehaviour
         turnotext.text = "JUGADOR " + turn;
       
         
-        StartCoroutine( contando());
+        StartCoroutine(contando());
         if (JUGADOR == 1)
         {
             creaciondesala();
@@ -611,6 +612,10 @@ public class gestor : MonoBehaviour
         }
 
     }
+
+    public Animator[] mano1;
+    public Transform[] mano1transform;
+
 
     public Animator animator1;
     public Animator animator2;
@@ -630,51 +635,75 @@ public class gestor : MonoBehaviour
 
     public void jugadademas()
     {
+      //  print("jugue");
+        
         if (turn == 1)
         {
+        
             quitadordeprimerosbotones();
             animator1.SetBool("jugar", true);
+            print("jugueyo");
         }
         if (turn == 2)
         {
+          
             animator2.SetBool("jugar", true);
+            print("jugueyo");
         }
         if (turn == 3)
         {
+
             animator3.SetBool("jugar", true);
+            print("jugueyo");
         }
         if (turn == 4)
         {
+           
             animator4.SetBool("jugar", true);
+            print("jugueyo");
         }
+        tirar();
+
+
+        mano1transform[turn-1].transform.position = fichasobjetos[i].position;
     }
 
     public void der()
     {
         derecha = true;
+        if (cantidadfichas1 != 0 && cantidadfichas2 != 0 && cantidadfichas3 != 0 && cantidadfichas4 != 0)
+        {
+            if (turn == 1)
+            {
+        
+                quitadordeprimerosbotones();
+                animator1.SetBool("jugar", true);
+            }
+            if (turn == 2)
+            {
+   
+                animator2.SetBool("jugar", true);
+            }
+            if (turn == 3)
+            {
+          
+                animator3.SetBool("jugar", true);
+            }
+            if (turn == 4)
+            {
+              
+                animator4.SetBool("jugar", true);
+            }
+            ladoizquierdo.SetActive(false);
+            ladoderecho.SetActive(false);
 
-        if (turn == 1)
-        {
-            quitadordeprimerosbotones();
-            animator1.SetBool("jugar", true);
-        } if (turn == 2)
-        {
-            animator2.SetBool("jugar", true);
-        } if (turn == 3)
-        {
-            animator3.SetBool("jugar", true);
-        } if (turn == 4)
-        {
-            animator4.SetBool("jugar", true);
+            tirar();
+            mano1transform[turn - 1].transform.position = fichasobjetos[i].position;
         }
-        ladoizquierdo.SetActive(false);
-        ladoderecho.SetActive(false);
-
-        //tirar();
     }
 
     public void falseador()
-    {
+    { 
         if (turn == 1)
         {
             animator1.SetBool("jugar", false);
@@ -692,31 +721,49 @@ public class gestor : MonoBehaviour
             animator4.SetBool("jugar", false);
         }
     }
+    public GameObject[] fichasrenderer;
 
-    public void izq()
+    public void PrendeFichas()
     {
-        derecha = false;
+        fichasrenderer[i].SetActive(true);
+        a.PlayOneShot(dominofuerte);
+    }
 
-        if (turn == 1)
+
+
+    public AudioSource a;
+    public AudioClip dominofuerte;
+    public void izq()
+    { 
+        derecha = false;
+        if (cantidadfichas1 != 0 && cantidadfichas2 != 0 && cantidadfichas3 != 0 && cantidadfichas4 != 0)
         {
-            quitadordeprimerosbotones();
-            animator1.SetBool("jugar", true);
+            if (turn == 1)
+            {
+              
+                quitadordeprimerosbotones();
+                animator1.SetBool("jugar", true);
+            }
+            if (turn == 2)
+            {
+               
+                animator2.SetBool("jugar", true);
+            }
+            if (turn == 3)
+            {
+               
+                animator3.SetBool("jugar", true);
+            }
+            if (turn == 4)
+            {
+              
+                animator4.SetBool("jugar", true);
+            }
+            ladoizquierdo.SetActive(false);
+            ladoderecho.SetActive(false);
+            tirar();
+            mano1transform[turn - 1].transform.position = fichasobjetos[i].position;
         }
-        if (turn == 2)
-        {
-            animator2.SetBool("jugar", true);
-        }
-        if (turn == 3)
-        {
-            animator3.SetBool("jugar", true);
-        }
-        if (turn == 4)
-        {
-            animator4.SetBool("jugar", true);
-        }
-        ladoizquierdo.SetActive(false);
-        ladoderecho.SetActive(false);
-        // tirar();
     }
     #region
 
@@ -1300,14 +1347,50 @@ public class gestor : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
+    public Animator[] avatar1animator;
+    public void cambiaranimator()
+    {
+        if (cama)
+        {
+            animator1 = mano1[0];
+            animator2 = mano1[1];
+            animator3 = mano1[2];
+            animator4 = mano1[3];
+        }
+        else
+        {
+            animator1 = avatar1animator[0];
+            animator2 = avatar1animator[1];
+            animator3 = avatar1animator[2];
+            animator4 = avatar1animator[3];
+        }
 
-
-
+       
+    }
+    public GameObject manitas;//aqui convertir en arreglo cuando haya mas persoANJES
+    public GameObject avatar; // aqui convertir en arreglo cuando haya mas persoANJES
     public void camara()
     {
         cam1.SetActive(cama);
         cam2.SetActive(!cama);
+        cambiaranimator();
+
+        if (cama)
+        {
+            avatar.SetActive(false);
+            manitas.SetActive(true);
+
+            
+
+        }
+        else
+        {
+            avatar.SetActive(true);
+            manitas.SetActive(false);
+        }
         cama = !cama;
+
+        
     }
 
     public void comprobar()
@@ -1323,7 +1406,11 @@ public class gestor : MonoBehaviour
             {
                 
                 activos[k] = true;
-                botones[k].color = white;
+
+                
+                
+                    botones[k].color = white;
+                
            //     botones2[k].color = Color.white;
           //      botones3[k].color = Color.white;
           //      botones4[k].color = Color.white;
@@ -1502,8 +1589,8 @@ public class gestor : MonoBehaviour
     }
     public void tirar()
     {
-        falseador();
-        turnando();
+      //  falseador();
+       // turnando();
       
 
         if (primerajugada)
@@ -1571,16 +1658,51 @@ public class gestor : MonoBehaviour
         }
 
 
+
         comprobar();
+
+
        
-        va = false;
+
+
+        if (va == false)
+        {
+            falseador();
+        }
+
+
+
+           if (turn != JUGADOR)
+           {
+
+               for (int k = 0; k < codigos.Length; k++)
+               {
+
+                   botones[k].color = d;
+
+               }
+           }
+
+
+        //  StartCoroutine(contando());
+    }
+
+
+
+    public void contand()
+    {
+        StopCoroutine(contando());
+        StartCoroutine(contando());
        
 
+       
 
-        while (va ==false && juegobloqueado==false)
-        Comprobadordeturno();
-        
+        turnando();
 
+
+        va = false; // no se
+        while (va == false && juegobloqueado == false)
+            Comprobadordeturno();
 
 
         if (turn != JUGADOR)
@@ -1588,33 +1710,45 @@ public class gestor : MonoBehaviour
 
             for (int k = 0; k < codigos.Length; k++)
             {
-          
+
                 botones[k].color = d;
 
             }
         }
+        else
+        {
+            comprobar();
 
+        }
 
-        StartCoroutine(contando());
+        falseador();
+
     }
+
 
     public GameObject[] tusfi;
     public bool jugar = true;
     IEnumerator contando()
     {
-            
+        falseador();
+        yield return new WaitForSecondsRealtime(1f);
 
-            yield return new WaitForSecondsRealtime(0.5f);
+        if (turn == 1)
+        {
+            yield return new WaitForSecondsRealtime(1f);
+        }
+            
             contar1();
 
 
-        if (juegobloqueado == false) { 
+        if (juegobloqueado == false) {
 
 
-            yield return new WaitForSecondsRealtime(1f);
+            yield return new WaitForSecondsRealtime(1.5f);
 
             if (turn == 2)
             {
+               
                 if (primerajugada)
                 {
                     i = 27;
@@ -1626,13 +1760,14 @@ public class gestor : MonoBehaviour
                 {
                     brutezaartificial2();
                 }
-
+                
             }
 
-            yield return new WaitForSecondsRealtime(1f);
+            yield return new WaitForSecondsRealtime(1.5f);
 
             if (turn == 3)
             {
+               
                 if (primerajugada)
                 {
                     i = 27;
@@ -1644,13 +1779,15 @@ public class gestor : MonoBehaviour
                 {
                     brutezaartificial3();
                 }
+              
             }
 
+            yield return new WaitForSecondsRealtime(1.5f);
 
-            yield return new WaitForSecondsRealtime(1f);
 
             if (turn == 4)
             {
+                
                 if (primerajugada)
                 {
                     i = 27;
@@ -1662,7 +1799,15 @@ public class gestor : MonoBehaviour
                 {
                     brutezaartificial4();
                 }
+               
             }
+
+          
+          
+
+           
+           
+
 
         }
 
