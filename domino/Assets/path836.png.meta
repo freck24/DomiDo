@@ -1,0 +1,716 @@
+fileFormatVersion: 2
+guid: 3f83332797324c04e948e3c5800348cd
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8785236105409831949
+    second: path836_0
+  - first:
+      213: -5203983255472642681
+    second: path836_1
+  - first:
+      213: 2368461873781139912
+    second: path836_2
+  - first:
+      213: -7462041535315029086
+    second: path836_3
+  - first:
+      213: 826208005535777285
+    second: path836_4
+  - first:
+      213: -1696302971401186969
+    second: path836_5
+  - first:
+      213: -2151978114465703123
+    second: path836_6
+  - first:
+      213: -8167632820353419094
+    second: path836_7
+  - first:
+      213: 3030580390784939325
+    second: path836_8
+  - first:
+      213: -3528496566862401027
+    second: path836_9
+  - first:
+      213: -2732982049183489031
+    second: path836_10
+  - first:
+      213: 8460966520623570081
+    second: path836_11
+  - first:
+      213: 2791093867993859289
+    second: path836_12
+  - first:
+      213: 213207005795633228
+    second: path836_13
+  - first:
+      213: -1046639113777266977
+    second: path836_14
+  - first:
+      213: -4293186938128474959
+    second: path836_15
+  - first:
+      213: 3324114598419508390
+    second: path836_16
+  - first:
+      213: -4253638139219404478
+    second: path836_17
+  - first:
+      213: 768873482830518176
+    second: path836_18
+  - first:
+      213: -5207285650961967844
+    second: path836_19
+  - first:
+      213: 7747570240510307390
+    second: path836_20
+  - first:
+      213: -8509518535474601851
+    second: path836_21
+  - first:
+      213: 867196959477782678
+    second: path836_22
+  - first:
+      213: -6030414313385275908
+    second: path836_23
+  - first:
+      213: 5993949489134801574
+    second: path836_24
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: path836_0
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 7525
+        width: 1386
+        height: 1386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d04a3e211bd6be970800000000000000
+      internalID: 8785236105409831949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: path836_1
+      rect:
+        serializedVersion: 2
+        x: 2076
+        y: 7526
+        width: 1384
+        height: 1385
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 785e8701dccb7c7b0800000000000000
+      internalID: -5203983255472642681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: path836_2
+      rect:
+        serializedVersion: 2
+        x: 3483
+        y: 7523
+        width: 1387
+        height: 1388
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c9e7ca86877ed020800000000000000
+      internalID: 2368461873781139912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: path836_3
+      rect:
+        serializedVersion: 2
+        x: 4892
+        y: 7523
+        width: 1390
+        height: 1388
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a3565c52c0817890800000000000000
+      internalID: -7462041535315029086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: path836_4
+      rect:
+        serializedVersion: 2
+        x: 6302
+        y: 7524
+        width: 1391
+        height: 1387
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5024b88bdc7477b00800000000000000
+      internalID: 826208005535777285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: path836_5
+      rect:
+        serializedVersion: 2
+        x: 7710
+        y: 7521
+        width: 1389
+        height: 1390
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76151365f658578e0800000000000000
+      internalID: -1696302971401186969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: path836_6
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 5570
+        width: 1391
+        height: 1386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2b5bda7e43a222e0800000000000000
+      internalID: -2151978114465703123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: path836_7
+      rect:
+        serializedVersion: 2
+        x: 1918
+        y: 5569
+        width: 1386
+        height: 1386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa8330f493db6ae80800000000000000
+      internalID: -8167632820353419094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: path836_8
+      rect:
+        serializedVersion: 2
+        x: 3323
+        y: 5566
+        width: 1386
+        height: 1386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3530080fc8ce0a20800000000000000
+      internalID: 3030580390784939325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: path836_9
+      rect:
+        serializedVersion: 2
+        x: 4730
+        y: 5572
+        width: 1386
+        height: 1386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df13bf43113480fc0800000000000000
+      internalID: -3528496566862401027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: path836_10
+      rect:
+        serializedVersion: 2
+        x: 6132
+        y: 5572
+        width: 1386
+        height: 1386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f326e46e4f721ad0800000000000000
+      internalID: -2732982049183489031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: path836_11
+      rect:
+        serializedVersion: 2
+        x: 7624
+        y: 5559
+        width: 1386
+        height: 1386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ac9d3ee8346b6570800000000000000
+      internalID: 8460966520623570081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: path836_12
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 3459
+        width: 1386
+        height: 1386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d48b88c515fbb620800000000000000
+      internalID: 2791093867993859289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: path836_13
+      rect:
+        serializedVersion: 2
+        x: 1437
+        y: 3450
+        width: 1386
+        height: 1386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c48c21464a675f200800000000000000
+      internalID: 213207005795633228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: path836_14
+      rect:
+        serializedVersion: 2
+        x: 2843
+        y: 3448
+        width: 1386
+        height: 1386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdeb64775479971f0800000000000000
+      internalID: -1046639113777266977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: path836_15
+      rect:
+        serializedVersion: 2
+        x: 4254
+        y: 3451
+        width: 1386
+        height: 1386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bc518ed9398b64c0800000000000000
+      internalID: -4293186938128474959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: path836_16
+      rect:
+        serializedVersion: 2
+        x: 5663
+        y: 3446
+        width: 1386
+        height: 1386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ac2c778d90a12e20800000000000000
+      internalID: 3324114598419508390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: path836_17
+      rect:
+        serializedVersion: 2
+        x: 7071
+        y: 3446
+        width: 1386
+        height: 1386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24916cc26aa08f4c0800000000000000
+      internalID: -4253638139219404478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: path836_18
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 1402
+        width: 1386
+        height: 1386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a79455eb569baa00800000000000000
+      internalID: 768873482830518176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: path836_19
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 1386
+        height: 1386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c155c623a410cb7b0800000000000000
+      internalID: -5207285650961967844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: path836_20
+      rect:
+        serializedVersion: 2
+        x: 1436
+        y: 1402
+        width: 1386
+        height: 1386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3c210ad516e48b60800000000000000
+      internalID: 7747570240510307390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: path836_21
+      rect:
+        serializedVersion: 2
+        x: 2852
+        y: 1400
+        width: 1386
+        height: 1386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5802f633afd18e980800000000000000
+      internalID: -8509518535474601851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: path836_22
+      rect:
+        serializedVersion: 2
+        x: 7242
+        y: 1405
+        width: 1386
+        height: 1386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 698d8ff3a07e80c00800000000000000
+      internalID: 867196959477782678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: path836_23
+      rect:
+        serializedVersion: 2
+        x: 4295
+        y: 1402
+        width: 1386
+        height: 1386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfd4d3ae12aaf4ca0800000000000000
+      internalID: -6030414313385275908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: path836_24
+      rect:
+        serializedVersion: 2
+        x: 5761
+        y: 1400
+        width: 1386
+        height: 1386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a293859d49ce2350800000000000000
+      internalID: 5993949489134801574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: c36f06527266a824e95c4cc8fedc5489
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
