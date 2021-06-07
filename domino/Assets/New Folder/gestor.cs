@@ -664,6 +664,13 @@ public class gestor : MonoBehaviour
     public Text puntj4text;
     void Start()
     {
+        for(int k = 0; k < TIEMPO.Length; k++)
+        {
+            TIEMPO[k] = tiempoglabal;
+        }
+
+
+
         camara();
         puntj1 = PlayerPrefs.GetInt("puntj1", 0);
         puntj2 = PlayerPrefs.GetInt("puntj2", 0);
@@ -1822,13 +1829,10 @@ public class gestor : MonoBehaviour
         falseador();
         yield return new WaitForSecondsRealtime(0.1f);
 
-        /*  if (turn == 1)
-          {
-              yield return new WaitForSecondsRealtime(1f);
-          }*/
+       
 
         contar1();
-
+        puedebajar = true;
 
         /* if (juegobloqueado == false) {
 
@@ -1906,10 +1910,10 @@ public class gestor : MonoBehaviour
 
 
     public float tiempoglabal;
-    public float TIEMPO;
+    public float[] TIEMPO=new float[4];
     public Transform[] barratiempo;
     int guardaturn;
-    bool puedebajar = true; // iniciar cuando yo quiera
+   public bool puedebajar = true; // iniciar cuando yo quiera
 
     void Update()
     {
@@ -1920,35 +1924,41 @@ public class gestor : MonoBehaviour
             puedebajar = true;
         }
 
-
-        if (TIEMPO > 0 && puedebajar)
+        if (puedebajar)
         {
-            TIEMPO -= Time.deltaTime;
+            if (TIEMPO[turn - 1] > 0)
+            {
+                TIEMPO[turn - 1] -= Time.deltaTime;
 
-            barratiempo[turn - 1].transform.localScale = new Vector3(TIEMPO/10, barratiempo[turn - 1].transform.localScale.y, barratiempo[turn - 1].transform.localScale.z);
+                barratiempo[turn - 1].transform.localScale = new Vector3(TIEMPO[turn - 1] / 10, barratiempo[turn - 1].transform.localScale.y, barratiempo[turn - 1].transform.localScale.z);
 
 
-        } 
-    
-    
-        else
-        {
-            TIEMPO = tiempoglabal;
-            guardaturn = turn;
-            if (turn == 1)
-            {
-                automatico1 = true;
-            }if (turn == 2)
-            {
-                automatico1 = true;
-            }if (turn == 3)
-            {
-                automatico1 = true;
-            }if (turn == 4)
-            {
-                automatico1 = true;
             }
-            puedebajar = false;
+
+
+            else
+            {
+                TIEMPO[turn - 1] = tiempoglabal;
+                puedebajar = false;
+                guardaturn = turn;
+                if (turn == 1)
+                {
+                    automatico1 = true;
+                }
+                if (turn == 2)
+                {
+                    automatico2 = true;
+                }
+                if (turn == 3)
+                {
+                    automatico3 = true;
+                }
+                if (turn == 4)
+                {
+                    automatico4 = true;
+                }
+
+            }
         }
 
 

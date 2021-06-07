@@ -64468,13 +64468,18 @@ MonoBehaviour:
   - {fileID: 59422933}
   - {fileID: 838906957}
   jugar: 1
-  tiempoglabal: 10
-  TIEMPO: 10
+  tiempoglabal: 1
+  TIEMPO:
+  - 5
+  - 5
+  - 5
+  - 5
   barratiempo:
   - {fileID: 1358425336}
   - {fileID: 487221488}
   - {fileID: 1240404006}
   - {fileID: 697619785}
+  puedebajar: 1
 --- !u!4 &1577235947
 Transform:
   m_ObjectHideFlags: 0
