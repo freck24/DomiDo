@@ -1953,6 +1953,7 @@ public class gestor : MonoBehaviour
     public float[] TIEMPO=new float[4];
     public Transform[] barratiempo;
     int guardaturn;
+    public Toggle automaticotoggle;
    public bool puedebajar = true; // iniciar cuando yo quiera
 
     void Update()
@@ -2030,7 +2031,13 @@ public class gestor : MonoBehaviour
                 if (jugo[0] == false) 
                 {
                     brutezaartificial1();
+                    automaticotiempo[turn - 1] = true;
                     TIEMPO[turn - 1] = tiempoautomatico;
+                    if (automaticotiempo[0] && JUGADOR==1)
+                    {
+                        botonautomatico.SetActive(true);
+                        automaticotoggle.isOn = true; 
+                    }
                 }
                 
                 automatico1 = false;
@@ -2040,7 +2047,13 @@ public class gestor : MonoBehaviour
                 if (jugo[1] == false)
                 {
                     brutezaartificial2();
+                    automaticotiempo[turn - 1] = true;
                     TIEMPO[turn - 1] = tiempoautomatico;
+                    if (automaticotiempo[1] && JUGADOR == 2)
+                    {
+                        botonautomatico.SetActive(true);
+                        automaticotoggle.isOn = true;
+                    }
                 }
                 automatico2 = false;
             }
@@ -2049,7 +2062,13 @@ public class gestor : MonoBehaviour
                 if (jugo[2] == false)
                 {
                     brutezaartificial3();
+                    automaticotiempo[turn - 1] = true;
                     TIEMPO[turn - 1] = tiempoautomatico;
+                    if (automaticotiempo[2] && JUGADOR == 3)
+                    {
+                        botonautomatico.SetActive(true);
+                        automaticotoggle.isOn = true;
+                    }
                 }
                 automatico3 = false;
             }
@@ -2058,7 +2077,13 @@ public class gestor : MonoBehaviour
                 if (jugo[3] == false)
                 {
                     brutezaartificial4();
+                    automaticotiempo[turn - 1] = true;
                     TIEMPO[turn - 1] = tiempoautomatico;
+                    if (automaticotiempo[3] && JUGADOR == 4)
+                    {
+                        botonautomatico.SetActive(true);
+                        automaticotoggle.isOn = true;
+                    }
                 }
                 automatico4 = false;
             }
@@ -2067,8 +2092,32 @@ public class gestor : MonoBehaviour
 
 
     }
+    public GameObject botonautomatico;
+    public void automatic()
+    {
 
+        if (automaticotoggle.isOn == true)
+        {
+            automaticotiempo[JUGADOR - 1] = false;
 
+            for (int k = 0; k < TIEMPO.Length; k++)
+            {
+                TIEMPO[k] = tiempoglabal;
+                if (automaticotiempo[k])
+                {
+                    TIEMPO[k] = tiempoautomatico;
+                }
+                else
+                {
+                    TIEMPO[k] = tiempoglabal;
+                }
+
+            }
+
+            botonautomatico.SetActive(false);
+        }
+        
+    }
 
     IEnumerator quitar()
     {
