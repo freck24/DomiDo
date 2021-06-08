@@ -8,7 +8,10 @@ public class gestor : MonoBehaviour
 {
     public GameObject controlesprincipal;
     // Start is called before the first frame update
+    public int[] jugadas=new int[28];
+    public int numerodejugadas = 0;
 
+    
 
    
 
@@ -662,9 +665,19 @@ public class gestor : MonoBehaviour
     public Text puntj4text;
     void Start()
     {
+        numerodejugadas = 0;
         for(int k = 0; k < TIEMPO.Length; k++)
         {
             TIEMPO[k] = tiempoglabal;
+            if (automaticotiempo[k])
+            {
+                TIEMPO[k] = tiempoautomatico;
+            }
+            else
+            {
+                TIEMPO[k] = tiempoglabal;
+            }
+
         }
 
 
@@ -1697,11 +1710,19 @@ public class gestor : MonoBehaviour
     {
         tusfi[i].SetActive(false);
     }
+
+    public int[] derechaslista = new int[28];
     public void tirar()
     {
         //  falseador();
         // turnando();
-
+        jugadas[numerodejugadas] = i;
+        if (derecha)
+        {
+            derechaslista[numerodejugadas] = 1;
+        }
+        numerodejugadas +=1;
+       
 
         if (primerajugada)
         {
@@ -1798,8 +1819,7 @@ public class gestor : MonoBehaviour
 
 
 
-
-      
+       
     }
 
 
@@ -1927,8 +1947,9 @@ public class gestor : MonoBehaviour
 
     // Update is called once per frame
 
-
+    public bool[] automaticotiempo = new bool[4];
     public float tiempoglabal;
+    public float tiempoautomatico;
     public float[] TIEMPO=new float[4];
     public Transform[] barratiempo;
     int guardaturn;
@@ -1948,8 +1969,17 @@ public class gestor : MonoBehaviour
             if (TIEMPO[turn - 1] > 0)
             {
                 TIEMPO[turn - 1] -= Time.deltaTime;
+                if (automaticotiempo[turn - 1])
+                {
+                   
+                    barratiempo[turn - 1].transform.localScale = new Vector3(TIEMPO[turn - 1] / tiempoautomatico, barratiempo[turn - 1].transform.localScale.y, barratiempo[turn - 1].transform.localScale.z);
 
-                barratiempo[turn - 1].transform.localScale = new Vector3(TIEMPO[turn - 1] / tiempoglabal, barratiempo[turn - 1].transform.localScale.y, barratiempo[turn - 1].transform.localScale.z);
+                }
+                else
+                {
+                    barratiempo[turn - 1].transform.localScale = new Vector3(TIEMPO[turn - 1] / tiempoglabal, barratiempo[turn - 1].transform.localScale.y, barratiempo[turn - 1].transform.localScale.z);
+                }
+                   
 
 
             }
@@ -1957,12 +1987,21 @@ public class gestor : MonoBehaviour
 
             else
             {
-                TIEMPO[turn - 1] = tiempoglabal;
+                if (automaticotiempo[turn - 1])
+                {
+                    TIEMPO[turn - 1] = tiempoautomatico;
+                }
+                else
+                {
+                    TIEMPO[turn - 1] = tiempoglabal;
+                }
+                
                 puedebajar = false;
                 guardaturn = turn;
                 if (turn == 1)
                 {
                     automatico1 = true;
+                    
                 }
                 if (turn == 2)
                 {
@@ -1990,7 +2029,8 @@ public class gestor : MonoBehaviour
             {
                 if (jugo[0] == false) 
                 {
-                    brutezaartificial1(); 
+                    brutezaartificial1();
+                    TIEMPO[turn - 1] = tiempoautomatico;
                 }
                 
                 automatico1 = false;
@@ -2000,6 +2040,7 @@ public class gestor : MonoBehaviour
                 if (jugo[1] == false)
                 {
                     brutezaartificial2();
+                    TIEMPO[turn - 1] = tiempoautomatico;
                 }
                 automatico2 = false;
             }
@@ -2008,6 +2049,7 @@ public class gestor : MonoBehaviour
                 if (jugo[2] == false)
                 {
                     brutezaartificial3();
+                    TIEMPO[turn - 1] = tiempoautomatico;
                 }
                 automatico3 = false;
             }
@@ -2016,6 +2058,7 @@ public class gestor : MonoBehaviour
                 if (jugo[3] == false)
                 {
                     brutezaartificial4();
+                    TIEMPO[turn - 1] = tiempoautomatico;
                 }
                 automatico4 = false;
             }
