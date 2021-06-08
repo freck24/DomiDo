@@ -1930,7 +1930,7 @@ public class gestor : MonoBehaviour
             {
                 TIEMPO[turn - 1] -= Time.deltaTime;
 
-                barratiempo[turn - 1].transform.localScale = new Vector3(TIEMPO[turn - 1] / 10, barratiempo[turn - 1].transform.localScale.y, barratiempo[turn - 1].transform.localScale.z);
+                barratiempo[turn - 1].transform.localScale = new Vector3(TIEMPO[turn - 1] / tiempoglabal, barratiempo[turn - 1].transform.localScale.y, barratiempo[turn - 1].transform.localScale.z);
 
 
             }
