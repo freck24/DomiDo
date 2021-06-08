@@ -10,10 +10,7 @@ public class gestor : MonoBehaviour
     // Start is called before the first frame update
 
 
-    public int sala;
-    public int let;
-    public string[] letras = { "a", "b", "c", "d" };
-    public string salareal;
+   
 
     public bool automatico1 = false;
     public bool automatico2 = false;
@@ -219,13 +216,7 @@ public class gestor : MonoBehaviour
 
 
 
-    public void creaciondesala()
-    {
-        sala = Random.Range(1000, 9999);
-        let = Random.Range(0, letras.Length);
-        salareal = "" + letras[let] + sala;
-
-    }
+  
     public int turn = 1;
     public int JUGADOR = 1;
     public bool derecha;
@@ -486,6 +477,13 @@ public class gestor : MonoBehaviour
 
     public int valorguardado;
     public int valorguardadomayor;
+
+    public bool[] jugo = new bool[4];
+    public void menu()
+    {
+        SceneManager.LoadScene(0);
+    }
+
     public void ordenar()
     {
 
@@ -692,10 +690,7 @@ public class gestor : MonoBehaviour
 
 
         StartCoroutine(contando());
-        if (JUGADOR == 1)
-        {
-            creaciondesala();
-        }
+       
 
         if (turn != JUGADOR)
         {
@@ -823,6 +818,15 @@ public class gestor : MonoBehaviour
     {
         fichasrenderer[i].SetActive(true);
         a.PlayOneShot(dominofuerte);
+
+        for (int k = 0; k < 4; k++)
+        {
+            jugo[k] = false;
+           // if (k != (turn - 1))
+            {
+                barratiempo[k].transform.localScale = new Vector3(0, 1, 1);
+            }
+        }
     }
 
 
@@ -1440,7 +1444,7 @@ public class gestor : MonoBehaviour
 
     public void newgame()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 
     public Animator[] avatar1animator;
@@ -1651,12 +1655,22 @@ public class gestor : MonoBehaviour
 
 
 
-
-
+    public void yajugue()
+    {
+        jugo[turn - 1] = true;
+        TIEMPO[turn - 1] = 0;
+    }
 
 
     public void turnando()
-    {
+    { for(int k =0; k<4; k++)
+        {
+            jugo[k] = false;
+            if (k!= (turn-1))
+            {
+                barratiempo[k].transform.localScale = new Vector3(0, 1, 1);
+            }
+        }
         if (turn < 4)
         {
             turn += 1;
@@ -1781,6 +1795,11 @@ public class gestor : MonoBehaviour
 
 
         //  StartCoroutine(contando());
+
+
+
+
+      
     }
 
 
@@ -1969,22 +1988,35 @@ public class gestor : MonoBehaviour
 
             if (automatico1)
             {
-                brutezaartificial1();
+                if (jugo[0] == false) 
+                {
+                    brutezaartificial1(); 
+                }
+                
                 automatico1 = false;
             }
             if (automatico2)
             {
-                brutezaartificial2();
+                if (jugo[1] == false)
+                {
+                    brutezaartificial2();
+                }
                 automatico2 = false;
             }
             if (automatico3)
             {
-                brutezaartificial3();
+                if (jugo[2] == false)
+                {
+                    brutezaartificial3();
+                }
                 automatico3 = false;
             }
             if (automatico4)
             {
-                brutezaartificial4();
+                if (jugo[3] == false)
+                {
+                    brutezaartificial4();
+                }
                 automatico4 = false;
             }
         }
