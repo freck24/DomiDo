@@ -2036,7 +2036,8 @@ public class gestor : MonoBehaviour
                     if (automaticotiempo[0] && JUGADOR==1)
                     {
                         botonautomatico.SetActive(true);
-                        automaticotoggle.isOn = true; 
+                        automaticotoggle.isOn = true;
+                        print("auto");
                     }
                 }
                 
@@ -2081,7 +2082,7 @@ public class gestor : MonoBehaviour
                     TIEMPO[turn - 1] = tiempoautomatico;
                     if (automaticotiempo[3] && JUGADOR == 4)
                     {
-                        botonautomatico.SetActive(true);
+                     //   botonautomatico.SetActive(true);
                         automaticotoggle.isOn = true;
                     }
                 }
@@ -2114,7 +2115,7 @@ public class gestor : MonoBehaviour
 
             }
 
-            botonautomatico.SetActive(false);
+         //   botonautomatico.SetActive(false);
         }
         
     }
