@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "713486073351",
+    "firebase_url": "https://domido-ddcc8-default-rtdb.firebaseio.com",
+    "project_id": "domido-ddcc8",
+    "storage_bucket": "domido-ddcc8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:713486073351:android:9511b37990b6d745a234a2",
+        "android_client_info": {
+          "package_name": "domido.dogame"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "713486073351-6mtkdc148jhuefmanpg2112suom6ddej.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAlllRhh1ZVyx41_t1ytnBcuyxcPm5_640"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "713486073351-6mtkdc148jhuefmanpg2112suom6ddej.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

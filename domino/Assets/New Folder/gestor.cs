@@ -2001,8 +2001,10 @@ public class gestor : MonoBehaviour
                 guardaturn = turn;
                 if (turn == 1)
                 {
+                    print("pso por aqui");
                     automatico1 = true;
-                    
+                    automaticotiempo[turn - 1] = true;
+                    TIEMPO[turn - 1] = tiempoautomatico;
                 }
                 if (turn == 2)
                 {
@@ -2031,7 +2033,7 @@ public class gestor : MonoBehaviour
                 if (jugo[0] == false) 
                 {
                     brutezaartificial1();
-                    automaticotiempo[turn - 1] = true;
+                //    automaticotiempo[turn - 1] = true;
                     TIEMPO[turn - 1] = tiempoautomatico;
                     if (automaticotiempo[0] && JUGADOR==1)
                     {
@@ -2094,12 +2096,15 @@ public class gestor : MonoBehaviour
 
     }
     public GameObject botonautomatico;
+    bool boolautomatico = false;
     public void automatic()
     {
 
-        if (automaticotoggle.isOn == true)
+        //if (automaticotoggle.isOn == true)
         {
-            automaticotiempo[JUGADOR - 1] = false;
+            boolautomatico = !boolautomatico;
+            automaticotiempo[JUGADOR - 1] = boolautomatico;
+            
 
             for (int k = 0; k < TIEMPO.Length; k++)
             {
